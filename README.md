@@ -4,3 +4,4 @@ An android application which lets users save notes forever until manually delete
 * Room Database 
 * SQLite Query Language
 * Recycler View
+* Android Architecture Components
