@@ -13,6 +13,7 @@ class NotesRVAdapter(private val context: Context, private val listener: INotesR
 
     private val allNotes = ArrayList<Notes>()
 
+    //ViewHolder class
     inner class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val textView: TextView = itemView.findViewById(R.id.note_text)
