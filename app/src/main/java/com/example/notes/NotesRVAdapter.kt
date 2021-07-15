@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class NotesRVAdapter(private val context: Context, private val listener: INotesRVAdapter) :
+class NotesRVAdapter(private val listener: INotesRVAdapter) :
     RecyclerView.Adapter<NotesRVAdapter.NoteViewHolder>() {
 
     private val allNotes = ArrayList<Notes>()
@@ -21,7 +21,7 @@ class NotesRVAdapter(private val context: Context, private val listener: INotesR
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
-        val itemView = LayoutInflater.from(context).inflate(R.layout.item_notes, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_notes, parent, false)
         val viewHolder = NoteViewHolder(itemView)
 
         viewHolder.deleteButton.setOnClickListener {
